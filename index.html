@@ -6,14 +6,33 @@
     <title>My Website</title>
 
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/weather-icons.css" />
     <link rel="stylesheet" href="css/styles.css" />
     
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
     
-    <div id = "weather"></div>
-    
+    <div class="row">
+      
+      <div class="columns small-12">
+        <h1 class="temp"> </h1>
+      </div>
+      
+      <div class="columns small-6">
+        <h3 class="wi-thermometer-exterior tomHi"> </h3>
+      </div>
+      
+      <div class="columns small-6">
+        <h3 class="wi-thermometer-internal tomLo"> </h3>
+      </div>
+      
+      <div class="columns small-12">
+        <p class="cityAndState"> </p>
+      </div>
+
+    </div> <!-- end .row -->
+     
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/weather.js"></script>

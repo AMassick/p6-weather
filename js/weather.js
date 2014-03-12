@@ -24,7 +24,7 @@
 
       var now = new Date();
 
-      var weatherUrl = '//query.yahooapis.com/v1/public/yql?format=json&rnd='+now.getFullYear()+now.getMonth()+now.getDay()+now.getHours()+'&diagnostics=true&callback=?&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&q=';
+      var weatherUrl = 'http://query.yahooapis.com/v1/public/yql?format=json&rnd='+now.getFullYear()+now.getMonth()+now.getDay()+now.getHours()+'&diagnostics=true&callback=?&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&q=';
       if(options.location !== '') {
         weatherUrl += 'select * from weather.forecast where woeid in (select woeid from geo.placefinder where text="'+options.location+'" and gflags="R") and u="'+options.unit+'"';
       } else if(options.woeid !== '') {
@@ -116,8 +116,8 @@
                 sunrise: result.astronomy.sunrise,
                 sunset: result.astronomy.sunset,
                 description: result.item.description,
-                thumbnail: "//l.yimg.com/a/i/us/nws/weather/gr/"+result.item.condition.code+"ds.png",
-                image: "//l.yimg.com/a/i/us/nws/weather/gr/"+result.item.condition.code+"d.png",
+                thumbnail: "http://l.yimg.com/a/i/us/nws/weather/gr/"+result.item.condition.code+"ds.png",
+                image: "http://l.yimg.com/a/i/us/nws/weather/gr/"+result.item.condition.code+"d.png",
                 tomorrow:{
                   high: result.item.forecast[1].high,
                   highAlt: tomorrowHighAlt,
@@ -127,7 +127,7 @@
                   code: result.item.forecast[1].code,
                   date: result.item.forecast[1].date,
                   day: result.item.forecast[1].day,
-                  image: "//l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[1].code+"d.png"
+                  image: "http://l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[1].code+"d.png"
                 },
                 forecasts:{
                   one:{
@@ -139,7 +139,7 @@
                     code: result.item.forecast[1].code,
                     date: result.item.forecast[1].date,
                     day: result.item.forecast[1].day,
-                    image: "//l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[1].code+"d.png"
+                    image: "http://l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[1].code+"d.png"
                   },
                   two:{
                     high: result.item.forecast[2].high,
@@ -150,7 +150,7 @@
                     code: result.item.forecast[2].code,
                     date: result.item.forecast[2].date,
                     day: result.item.forecast[2].day,
-                    image: "//l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[2].code+"d.png"
+                    image: "http://l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[2].code+"d.png"
                   },
                   three:{
                     high: result.item.forecast[3].high,
@@ -161,7 +161,7 @@
                     code: result.item.forecast[3].code,
                     date: result.item.forecast[3].date,
                     day: result.item.forecast[3].day,
-                    image: "//l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[3].code+"d.png"
+                    image: "http://l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[3].code+"d.png"
                   },
                   four:{
                     high: result.item.forecast[4].high,
@@ -172,7 +172,7 @@
                     code: result.item.forecast[4].code,
                     date: result.item.forecast[4].date,
                     day: result.item.forecast[4].day,
-                    image: "//l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[4].code+"d.png"
+                    image: "http://l.yimg.com/a/i/us/nws/weather/gr/"+result.item.forecast[4].code+"d.png"
                   },
                 },
                 city: result.location.city,
