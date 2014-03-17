@@ -38,7 +38,7 @@ $(document).ready(function(){
       // html = '<h2><i class="icon-' + weather.code+'"></i> ' + weather.temp +'&deg;' + weather.units.temp+'</h2>';
       var temp, tomHi, tomLo, cityAndState; 
 
-      temp = weather.temp + '<span> f</span>';
+      temp = weather.temp + '<span> deg F</span>';
       tomHi = weather.tomorrow.high;
       tomLo = weather.tomorrow.low;
       cityAndState = weather.city + ' , ' + weather.region;
@@ -94,7 +94,7 @@ var loadWeather = function(location) {
     success: function(weather) {
       
       // Get & store temperature
-      var temp = weather.temp;
+      var temp = weather.temp + '<span> deg F</span>';
       // Get & store city
       var city = weather.city;
       var tomHi = weather.tomorrow.high;
